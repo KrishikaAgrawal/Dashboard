@@ -33,39 +33,39 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-6 flex justify-around items-center">
         <div className="">Wi-Jungle</div>
-        <ul className="flex space-x-4 text-sm">
+        <ul className="flex space-x-4 text-sm items-center">
           <li>
-            <a href="#home" className=" underline-offset-8">
+            <a href="#home" className=" text-base">
               DASHBOARD
             </a>
           </li>
           <li>
-            <a href="#home" className="">
+            <a href="#home" className=" text-slate-400">
               MARKET
             </a>
           </li>
           <li>
-            <a href="#about" className="">
+            <a href="#about" className="text-slate-400">
               PRODUCTS
             </a>
           </li>
           <li>
-            <a href="#contact" className="">
+            <a href="#contact" className="text-slate-400">
               PARTNER
             </a>
           </li>
           <li>
-            <a href="#contact" className="">
+            <a href="#contact" className="text-slate-400">
               SUPPORT
             </a>
           </li>
           <li>
-            <a href="#contact" className="">
+            <a href="#contact" className="text-slate-400">
               NEWS
             </a>
           </li>
           <li>
-            <a href="#contact" className="">
+            <a href="#contact" className="text-slate-400">
               MORE
             </a>
           </li>
@@ -87,7 +87,11 @@ const Dashboard = ({ data }) => {
     []
   );
   if (!Array.isArray(data) || data.length === 0) {
-    return <div>Loading...</div>;
+    return (
+      <div className="h-screen flex justify-center items-center font-bold ">
+        <h1 className=" text-4xl">Loading...</h1>
+      </div>
+    );
   }
   const summaryData = {
     totalAlerts: data.length,
@@ -99,7 +103,7 @@ const Dashboard = ({ data }) => {
       <div>
         <Navbar />
         <div className="container mx-auto p-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className=" mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <SummaryCard title="Total Alerts" value={summaryData.totalAlerts} />
             <SummaryCard title="Unique IPs" value={summaryData.uniqueIPs} />
           </div>
