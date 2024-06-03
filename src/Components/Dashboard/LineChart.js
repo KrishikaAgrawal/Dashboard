@@ -23,6 +23,7 @@ const LineChart = ({ data }) => {
         ],
       },
       options: {
+        maintainAspectRatio: false, // Ensure the chart fills the container
         scales: {
           x: {
             beginAtZero: true,
@@ -40,12 +41,12 @@ const LineChart = ({ data }) => {
   }, [data]);
 
   return (
-    <div className="w-1/3 border-4 border-solid border-gray-600 bg-gray-800 p-4 rounded-lg">
-      <h1 className=" text-center text-xl mb-14 font-semibold ">
+    <div className="w-full md:w-1/3 h-96 flex flex-col border-4 border-solid border-gray-600 bg-gray-800 p-4 rounded-lg">
+      <h1 className="text-center text-xl font-semibold mb-4">
         Alerts Over Time
       </h1>
-      <div className="flex justify-center items-center">
-        <canvas ref={chartRef} />
+      <div className="flex justify-center items-center w-full h-full">
+        <canvas ref={chartRef} className="w-full h-full" />
       </div>
     </div>
   );

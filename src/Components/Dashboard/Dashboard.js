@@ -40,32 +40,32 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#home" className=" text-slate-400">
+            <a href="#home" className=" text-slate-400 hidden md:flex">
               MARKET
             </a>
           </li>
           <li>
-            <a href="#about" className="text-slate-400">
+            <a href="#about" className="text-slate-400 hidden md:flex">
               PRODUCTS
             </a>
           </li>
           <li>
-            <a href="#contact" className="text-slate-400">
+            <a href="#contact" className="text-slate-400 hidden md:flex">
               PARTNER
             </a>
           </li>
           <li>
-            <a href="#contact" className="text-slate-400">
+            <a href="#contact" className="text-slate-400 hidden md:flex">
               SUPPORT
             </a>
           </li>
           <li>
-            <a href="#contact" className="text-slate-400">
+            <a href="#contact" className="text-slate-400 hidden md:flex">
               NEWS
             </a>
           </li>
           <li>
-            <a href="#contact" className="text-slate-400">
+            <a href="#contact" className="text-slate-400 hidden md:flex">
               MORE
             </a>
           </li>
@@ -107,7 +107,7 @@ const Dashboard = ({ data }) => {
             <SummaryCard title="Total Alerts" value={summaryData.totalAlerts} />
             <SummaryCard title="Unique IPs" value={summaryData.uniqueIPs} />
           </div>
-          <div className=" flex  flex-row justify-between md:flex-row md:space-x-4 space-y-4 md:space-y-0 mt-4">
+          <div className=" flex  flex-col item-center md:justify-between md:flex-row md:space-x-4 space-y-4 md:space-y-0 mt-4">
             <BarChart data={data} />
             <LineChart data={data} />
             <PieChart data={data} />

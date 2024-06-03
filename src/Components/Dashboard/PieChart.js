@@ -41,11 +41,13 @@ const PieChart = ({ data }) => {
   }, [data]);
 
   return (
-    <div className="w-1/3 flex flex-col justify-center items-center border-4 border-solid border-gray-600 bg-gray-800 p-4 rounded-lg">
-      <h1 className="text-xl font-semibold ">
+    <div className="w-full md:w-1/3 h-96 flex flex-col justify-center items-center border-4 border-solid border-gray-600 bg-gray-800 p-4 rounded-lg">
+      <h1 className="text-center text-xl font-semibold pt-2">
         Alerts Distribution by Severity
       </h1>
-      <canvas ref={chartRef} />
+      <div className="flex justify-center items-center w-full h-full">
+        <canvas ref={chartRef} className=" p-2 w-full h-full" />
+      </div>
     </div>
   );
 };
