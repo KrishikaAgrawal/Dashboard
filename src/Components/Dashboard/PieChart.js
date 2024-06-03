@@ -40,7 +40,14 @@ const PieChart = ({ data }) => {
     };
   }, [data]);
 
-  return <canvas ref={chartRef} />;
+  return (
+    <div className="w-1/3 flex flex-col justify-center items-center border-4 border-solid border-gray-600 bg-gray-800 p-4 rounded-lg">
+      <h1 className="text-xl font-semibold ">
+        Alerts Distribution by Severity
+      </h1>
+      <canvas ref={chartRef} />
+    </div>
+  );
 };
 
 export default PieChart;

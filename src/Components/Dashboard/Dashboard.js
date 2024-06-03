@@ -103,11 +103,11 @@ const Dashboard = ({ data }) => {
       <div>
         <Navbar />
         <div className="container mx-auto p-4">
-          <div className=" mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="mt-14 flex flex-col md:flex-row md:flex-wrap md:space-x-4">
             <SummaryCard title="Total Alerts" value={summaryData.totalAlerts} />
             <SummaryCard title="Unique IPs" value={summaryData.uniqueIPs} />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          <div className=" flex  flex-row justify-between md:flex-row md:space-x-4 space-y-4 md:space-y-0 mt-4">
             <BarChart data={data} />
             <LineChart data={data} />
             <PieChart data={data} />

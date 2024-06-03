@@ -42,7 +42,24 @@ const BarChart = ({ data }) => {
     return () => chart.destroy();
   }, [data]);
 
-  return <canvas ref={canvasRef} />;
+  return (
+    //    <div className="w-1/3 border-4 border-solid border-gray-600 bg-gray-800 p-4 rounded-lg">
+    //   <h1 className=" text-center mt-3 text-xl mb-14 font-semibold ">
+    //     Alerts Over Time
+    //   </h1>
+    //   <div className="flex justify-center items-center">
+    //     <canvas ref={chartRef} />
+    //   </div>
+    // </div>
+    <div className="w-1/3 border-4 border-solid border-gray-600 bg-gray-800 p-4 rounded-lg">
+      <h1 className="text-center  text-xl font-semibold mb-14">
+        Alerts By Category
+      </h1>
+      <div className="flex justify-center items-center">
+        <canvas ref={canvasRef} />
+      </div>
+    </div>
+  );
 };
 
 export default BarChart;
